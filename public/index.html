@@ -8,9 +8,15 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/toDoController.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="ToDoController as addTaskCtrl">
+    <h1>To do list</h1>
+    <form class="form-horizontal">
+      <input type="text" ng-model="addTaskCtrl.toDoItem">
+      <button class="btn" ng-click="">Add Task</button>
+    </form>
   </body>
   
   </html>
