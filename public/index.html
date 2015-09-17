@@ -16,6 +16,7 @@
     <h1>Add a Task</h1>
     <form class="form-horizontal">
       <input type="text" ng-model="toDoCtrl.taskName">
+      <input type="date" ng-model="toDoCtrl.taskDate">
       <button class="btn addButton" ng-click="toDoCtrl.addTask()">Add Task</button>
     </form>
 
@@ -23,6 +24,9 @@
     <ul class="list-group" >
       <li ng-repeat="task in toDoCtrl.tasks">
         <p>{{task.name}}</p>
+        <h5>{{task.date | date}}</h5>
+        <button ng-click="toDoCtrl.deleteTask()">Remove Task</button>
+        <button ng-click="toDoCtrl.editTask()">Edit Task</button>
       </li>
     </ul>
   </body>
